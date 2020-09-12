@@ -1,0 +1,56 @@
+
+//Directory
+cd /mnt/c/Users/'Tanmoy Paul'/Documents/GitHub/CSCI13500
+
+//Begin
+#include <iostream>
+
+int main()
+{
+
+//GitHub
+g++ -o name fileName			-compiles and makes output file: name
+g++ -c fileName						-compiles and makes object file: fileName.o
+./name										-runs output file called name
+git add	
+git commit -m ""
+git push -u origin master
+
+//Commands
+std::cout <<  << std::endl;
+std::cin >>
+if (condition1) {...}
+else if (condition2) {...}
+else {}
+while(condition) {...}
+int arr [#]= {...};							-declares array arr # units long
+arr[2] = #;								-inputs # in the 3rd place in the array
+sizeof(arr)									-outputs size of array arr
+
+//UNIX commands
+pwd											-prints what directory you're in
+cd ../Directory							-move back and into a diff directory
+cp file1 file2								-copies file1 and names it file2
+mv file1 file2							-renames file1 to file2
+touch newfilename					-creates new file
+rm file										-removes file
+mkdir newdirectoryname		-creates new directory
+clear											-cleans terminal
+^claer^clear							-fixes previous typo
+
+cat file.txt									-prints out everything in the txt file
+head -# file.txt							-prints out # number of lines in txt file
+tail -# file.txt							-prints out # line from the bottom
+
+//Objects
+std::string
+char
+int
+double
+long double
+
+//File Redirection, input is taken from txt file instead of keyboard
+./name < TextFile.txt
+
+// ssh-rsa key
+cat ~/.ssh/id_rsa.pub
