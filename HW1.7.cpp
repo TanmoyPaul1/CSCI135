@@ -1,4 +1,4 @@
-// This function will ask for 3 names and then print them out.
+//This function will ask for 3 names and then print them out.
 
 #include <iostream>
 
