@@ -1,5 +1,5 @@
-// This program outputs the cost per 100 miles
-// and the distance possible with inputted gallons and price.
+//This program outputs the cost per 100 miles
+//and the distance possible with inputted gallons and price.
 #include <iostream>
 
 int main()
