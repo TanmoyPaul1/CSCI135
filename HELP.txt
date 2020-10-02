@@ -21,7 +21,7 @@ git push -u origin master
 std::cout <<  << std::endl;
 std::cin >>
 getline(std::cin, stringName)					-gets entire line, used for sentences
-getline(ifstream, stringName)					-gets input from if stream, one word
+getline(ifstream, stringName)					-gets input from if stream
 if (condition1) {...}
 else if (condition2) {...}
 else {}
@@ -33,16 +33,17 @@ switch (condition) {								-different cases of if loops
   case #:
     break;
   default:
-    break;
-}
-int arr [#]= {...};										-declares array arr # units long
-char ch[#]={...};										-can input strings below # length
-arr[2] = #;											-inputs # in the 3rd place in the array
-sizeof(arr)												-outputs size of array arr
-&			func(int &variable)					-lets you actually change the variable value
-std::cout << &variable;						-can be used to print memory address
+    break;  }
+func(int &variable)								-& lets you change the actual variable value
+std::cout << &variable;						-& can be used to print memory address
 
 //#include <string>
+std::string	 str = "";
+str.length()											-gives length of str
+str.substr(index, length)						-substrings str at index for length units
+str1 += str2											-adds str2 to str1
+
+str.replace(index, length, string)
 std::isspace(char)									-used to check if a char is a space
 std::cerr <<											-method of outputting used for errors
 
@@ -51,6 +52,12 @@ std::vector<int/char> name={...};			-declares name vector with ... values
 name.push_back(x);								-adds x to end of vector 
 name.pop_back(x);								-removes x from end of vector 
 .size();													-returns size of the vector
+
+//Arrays
+int arr [#]= {...};										-declares array arr # units long
+char ch[#]={...};										-can input strings below # length
+arr[2] = #;											-inputs # in the 3rd place in the array
+sizeof(arr)												-outputs size of array arr
 
 //#include <fstream>
 std::ifstream stream1;							-creates an input stream
@@ -109,6 +116,7 @@ int														-integer between -2147483648 to 2147483647
 double
 long double
 const													-permanent value
+bool
 
 // ssh-rsa key
 cat ~/.ssh/id_rsa.pub
