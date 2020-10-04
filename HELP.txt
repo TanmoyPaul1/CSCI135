@@ -59,11 +59,20 @@ char ch[#]={...};										-can input strings below # length
 arr[2] = #;											    -inputs # in the 3rd place in the array
 sizeof(arr)												  -outputs size of array arr
 
+//#include <cstdlib>
+//#include <ctime>
+int randomNum = rand();             -returns num from 0.0 to RAND_MAX
+srand((unsigned) time(0));          -need this to get new random each time 
+int randomNum = rand() % 5 + 1;     -random number between 1 and 5, exclusive
+
+
 //#include <fstream>
 std::ifstream stream1;							-creates an input stream
-stream1.open("file.txt");						-creates an input stream from file.txt
-std::ifstream stream1("file.txt");	-above two in one step
+std::ofstream stream2;              -creates an output stream
+stream0.open("file.txt");						-creates an (in)output stream from file.txt
+std::ifstream stream1("file.txt");	-two steps in one
 stream1 >> x;										    -inserts stream1 values into x
+stream2 << "message\n";             -Writes the messages into the file 
 if (stream1.fail()) {...}						-tests if the input stream is valid
 while(!stream1.eof()) {...}					-until end of stream1, do ...
 exit(0);													  -Used to terminate program

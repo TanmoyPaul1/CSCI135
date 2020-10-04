@@ -1,13 +1,26 @@
 #include <iostream>
-#include <string>
-#include <cstring>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
+int main()
+{
+    int random = rand()%1000;
+    int random1 = rand() % 1000;
+    int random2 = rand() % 1000;
+    /* No srand() calls before rand(), so seed = 1*/
+    cout << "Seed = 1, Random number = " << random << endl;
+    cout << "Seed = 1, Random number = " << random1 << endl;
+    cout << "Seed = 1, Random number = " << random2 << endl;
 
-int main() {
-    string str1 = "We have seven Continents in the wolrd";
-    string str2 = "We have seven Continents in the wolrd";
-    str1 = str1 - str2;
-    cout << str1 << endl;
+    srand((unsigned)time(0));
+    /* Seed = 5 */
+    random = rand()%1000;
+    cout << "Seed = 5, Random number = " << random << endl;
+    random1 = rand() % 1000;
+    cout << "Seed = 5, Random number = " << random1 << endl;
+    random2 = rand() % 1000;
+    cout << "Seed = 5, Random number = " << random2 << endl;
+
     return 0;
 }
