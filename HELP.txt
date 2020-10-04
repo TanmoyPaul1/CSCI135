@@ -63,7 +63,7 @@ sizeof(arr)												  -outputs size of array arr
 //#include <ctime>
 int randomNum = rand();             -returns num from 0.0 to RAND_MAX
 srand((unsigned) time(0));          -need this to get new random each time 
-int randomNum = rand() % 5 + 1;     -random number between 1 and 5, exclusive
+int randomNum = rand() % 5 + 1;     -random number between 1 and 5, inclusive
 
 
 //#include <fstream>
