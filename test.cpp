@@ -12,7 +12,6 @@ int main()
     cout << "Seed = 1, Random number = " << random << endl;
     cout << "Seed = 1, Random number = " << random1 << endl;
     cout << "Seed = 1, Random number = " << random2 << endl;
-
     srand((unsigned)time(0));
     /* Seed = 5 */
     random = rand()%1000;
