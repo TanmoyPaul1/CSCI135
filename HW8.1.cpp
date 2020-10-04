@@ -11,7 +11,6 @@ int main()
     std::ofstream stream1("hello.txt");
     stream1 << "Hello, World!";
     stream1.close();
-
     std::string str = "";
     std::ifstream stream2("hello.txt");
     getline(stream2, str);
