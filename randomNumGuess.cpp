@@ -1,10 +1,14 @@
-//Enter the left end and right end of a range of integers. 
-//Let computer generate a random integer in this range. 
-//User makes a guess and computer will give a feedback. 
-//The feedback is “too big” when the guess is larger than 
-//the answer.  The feedback is “too small” when the guess 
-//is smaller than the answer. Based on the feedback, 
-//the user will continue to enter a guess until the guess equals the answer.
+/*
+Author: Tanmoy Paul
+Course: CSCI-135
+Instructor: Tong Yi
+Assignment: Project 2 Task A
+
+The computer will generate a random 
+number in a a given interval.
+The user will keep guessing numbers 
+with the given hints of too big or small. 
+*/
 
 #include <iostream>
 #include <cstdlib>
@@ -12,11 +16,13 @@
 
 int main()
 {
+    //Enter the left end and right end of a range of integers.
     int lower, higher, guess;
     std::cout << "Enter the lower bound: ";
     std::cin >> lower;
     std::cout << "Enter the higher bound: ";
     std::cin >> higher;
+    //Making sure bounds are usable. 
     while (lower>=higher)
     {
         std::cout << "Bounds invalid, re-enter:\n";
@@ -25,12 +31,15 @@ int main()
         std::cout << "Enter the lower bound: ";
         std::cin >> higher;
     }
-
+    //Computer generates a random integer in the range.
     srand((unsigned)time(0));
     int random = rand() % higher + lower;
     std::cout << "\nEnter your guess: ";
     std::cin >> guess;
 
+    //User makes a guess and computer will give feedback.
+    //Based on the feedback user will continue to enter 
+    //guesses until the guess equals the answer.
     while(guess != random)
     {
         if (guess < random)
@@ -46,6 +55,7 @@ int main()
             std::cin >> guess;
         }
     }
+    //Output when guess is correct. 
     std::cout << "Your guess is correct.\n";
     return 0;
 }
