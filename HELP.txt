@@ -37,6 +37,8 @@ switch (condition) {								-different cases of if loops
 func(int &variable)								  -& lets you change the actual variable value
 std::cout << &variable;						  -& can be used to print memory address
 
+return (condition ? result_if_true : result_if_false)
+
 //#include <string>
 std::string	 str = "";
 str.length()											  -gives length of str
@@ -58,6 +60,11 @@ int arr [#]= {...};									-declares array arr # units long
 char ch[#]={...};										-can input strings below # length
 arr[2] = #;											    -inputs # in the 3rd place in the array
 sizeof(arr)												  -outputs size of array arr
+
+//#include <cctype>
+isalpha(c) 	  	                    -Checks if character c is alphabetic,
+isdigit(c) 	  	                    -Checks if character c is decimal digit,
+isspace(c) 	  	                    -Checks if character c is a white-space.
 
 //#include <cstdlib>
 //#include <ctime>
