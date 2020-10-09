@@ -5,6 +5,9 @@ using namespace std;
 
 int main()
 {
+    system("g++ -o n Divide.cpp");
+    system("./n");
+    // system("clear");
     int random = rand()%1000;
     int random1 = rand() % 1000;
     int random2 = rand() % 1000;
