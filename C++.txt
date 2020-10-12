@@ -31,7 +31,6 @@ switch (condition) {								-different cases of if loops
     break;  }
 func(int &variable)								  -& lets you change the actual variable value
 std::cout << &variable;						  -& can be used to print memory address
-
 return (condition ? result_if_true : result_if_false)
 
 //#include <string>
@@ -100,6 +99,7 @@ clear														    -cleans terminal
 cat file.txt												-prints out everything in the txt file
 head -# file.txt										-prints out # number of lines in txt file
 tail -# file.txt										-prints out # line from the bottom
+make tests/g++ 2> error.log         -sends error output to a file, shows 1st error
 
 //Makefile
 targets : prerequisities						-targets are file names
