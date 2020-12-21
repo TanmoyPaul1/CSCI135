@@ -59,12 +59,12 @@ int main()
         if (feedback == 1)
         {
             std::cout << "Guess was too big";
-            higher = guess;
+            higher = guess - 1;
         }
         else if (feedback == 2)
         {
             std::cout << "Guess was too small";
-            lower = guess;
+            lower = guess + 1;
         }
         else if (feedback == 3)
         {

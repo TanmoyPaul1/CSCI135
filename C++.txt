@@ -11,12 +11,14 @@ git commit -m ""
 git push -u origin master
 
 //Commands
-system("terminalCommand")           -runs a terminal command from the code
 #include <iostream>
 std::cout <<  << std::endl;
 std::cin >>
 getline(std::cin, stringName)				-gets entire line, used for sentences
 getline(ifstream, stringName)				-gets input from if stream
+
+system("terminalCommand")           -runs a terminal command from the code
+return (condition ? result_if_true : result_if_false);
 if (condition1) {...}
 else if (condition2) {...}
 else {}
@@ -29,15 +31,16 @@ switch (condition) {								-different cases of if loops
     break;
   default:
     break;  }
-func(int &variable)								  -& lets you change the actual variable value
-std::cout << &variable;						  -& can be used to print memory address
-return (condition ? result_if_true : result_if_false)
+std::string *s;
+s = new std::string;                -DYNAMICALLY ALLOCATE MEMORY, wont disappear
+delete s;  delete[] arr;            -must manually delete or memory still used 
 
 //#include <string>
 std::string	 str = "";
 str.length()											  -gives length of str
 str.substr(index, length)						-substrings str at index for length units
 str1 += str2											  -adds str2 to str1
+str.front()  str.back()             -first/last character in string
 
 str.replace(index, length, string)
 std::isspace(char)									-used to check if a char is a space
@@ -47,10 +50,12 @@ std::cerr <<											  -method of outputting used for errors
 std::vector<int/char> name={...};		-declares name vector with ... values
 name.push_back(x);								  -adds x to end of vector 
 name.pop_back(x);								    -removes x from end of vector 
+variable = name.back()              -returns last value in vector
 .size();													  -returns size of the vector
 
 //Arrays
-int arr [#]= {...};									-declares array arr # units long
+int arr[#]= {...};									-declares array arr # units long
+int arr[rows][cols]                 -2D array
 char ch[#]={...};										-can input strings below # length
 arr[2] = #;											    -inputs # in the 3rd place in the array
 sizeof(arr)												  -outputs size of array arr
@@ -66,6 +71,12 @@ int randomNum = rand();             -returns num from 0.0 to RAND_MAX
 srand((unsigned) time(0));          -need this to get new random each time 
 int randomNum = rand() % 5 + 1;     -random number between 1 and 5, inclusive
 
+//#include <sstream>
+stringstream ss;
+ss<< “hello,world!!”;               -inputting the string into the sstream
+string mystr(“2019”);
+int myInt;
+stringstream (mystr)>>myInt;        -myInt has value of 2019
 
 //#include <fstream>
 std::ifstream stream1;							-creates an input stream
@@ -84,6 +95,13 @@ exit(1);													  -0 is for sucess, anything else for failure
 //#include <iomanip>
 cout << fixed << setprecision(#);		-cout uses # digits after the decimal point
 cout << setw(#) << variable;				-outputs # spaces above length of variable 
+
+//Pointers
+func(int &variable)								  -& lets you change the actual variable value
+std::cout << &variable;						  -& can be used to print memory address
+int* ptr = nullptr;                 -null declaration, can be changed to any memory address
+int* ptr = &variable;               -* makes it a pointer which makes ptr act like the variable
+(*ptr).object  ptr->object          -refers to an object in the pointer
 
 //UNIX commands
 pwd														      -prints what directory you're in
@@ -135,8 +153,22 @@ cat ~/.ssh/id_rsa.pub
 
 /*Other Commands*/
 
+//Doctest 
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+TEST_CASE("")
+{
+    CHECK();
+}
+
 //Enumerations - user-defined data type that consists of integral constants
 enum season { spring, summer, autumn, winter }; 
       -the default values are their indexes, but they can be declared otherwise
 season ss;                          -declare ss of type season
+
+//Image files
+eog image.pgm                       -terminal command for image viewing
+
+convert -compress none dog.png image.pgm
+convert image.pgm output.png
 
